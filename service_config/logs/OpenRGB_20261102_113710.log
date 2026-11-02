@@ -1,0 +1,256 @@
+    OpenRGB v1.1
+    Commit: 8e16de27858cf2be6af54a33ce003df74cb9fd3e from 2026-10-16 16:37:19 -0500
+    Launched: 20261102_113710
+====================================================================================================
+
+[16        ][Info   ][NetworkServer] Network connection thread started on port 6742
+[19        ][Info   ][DetectionManager] Saving detector settings
+[21        ][Info   ]------------------------------------------------------
+[21        ][Info   ]|               Start device detection               |
+[21        ][Info   ]------------------------------------------------------
+[190       ][Info   ]------------------------------------------------------
+[197       ][Info   ]|             Detecting I2C interfaces               |
+[197       ][Info   ]------------------------------------------------------
+[205       ][Info   ][DetectionManager] Registering I2C interface: Nvidia NvAPI I2C on GPU 0 Device 10DE:2882 Subsystem: 1458:410B
+[205       ][Info   ]Start PawnIO: SmbusI801.bin
+[211       ][Error  ]Could not open PawnIO, PawnIO initialization aborted
+[211       ][Info   ]Start PawnIO: SmbusPIIX4.bin
+[216       ][Error  ]Could not open PawnIO, PawnIO initialization aborted
+[216       ][Info   ]Start PawnIO: SmbusPIIX4.bin
+[217       ][Error  ]Could not open PawnIO, PawnIO initialization aborted
+[217       ][Info   ]Start PawnIO: SmbusNCT6793.bin
+[222       ][Error  ]Could not open PawnIO, PawnIO initialization aborted
+[222       ][Info   ]Start PawnIO: SmbusIntelSkylakeIMC.bin
+[232       ][Error  ]Could not open PawnIO, PawnIO initialization aborted
+[232       ][Info   ]Start PawnIO: SmbusIntelSkylakeIMC.bin
+[232       ][Error  ]Could not open PawnIO, PawnIO initialization aborted
+[232       ][Info   ]------------------------------------------------------
+[232       ][Info   ]|               Detecting I2C devices                |
+[232       ][Info   ]------------------------------------------------------
+[251       ][Info   ]------------------------------------------------------
+[251       ][Info   ]|            Detecting I2C DRAM modules              |
+[251       ][Info   ]------------------------------------------------------
+[251       ][Info   ]------------------------------------------------------
+[251       ][Info   ]|               Detecting I2C PCI devices            |
+[251       ][Info   ]------------------------------------------------------
+[418       ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col03#8&8c6cdfc&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[419       ][Info   ][DetectionManager] HID device connected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_01&Col03#8&44aa7e9&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[419       ][Info   ][DetectionManager] HID device connected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_02&Col01#8&35b4ddc4&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[419       ][Info   ][DetectionManager] HID device connected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_01&Col01#8&44aa7e9&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[419       ][Info   ][DetectionManager] HID device connected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_02&Col02#8&35b4ddc4&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1441      ][Info   ][DetectionManager] Registering RGB controller G703 LIGHTSPEED Wireless Gaming Mouse w/ HERO
+[1442      ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col04#8&8c6cdfc&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[1442      ][Info   ][DetectionManager] HID device connected: [0c76:8688 - \\?\HID#VID_0C76&PID_8688&MI_03#8&30497815&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1442      ][Info   ][DetectionManager] HID device connected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_00#8&2cb555b2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1442      ][Info   ][DetectionManager] HID device connected: [046d:c539 - \\?\HID#VID_046D&PID_C539&MI_02&Col01#8&6f944bd&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1517      ][Info   ]Count of connected devices to C539: 1
+[1517      ][Info   ]Faking a reconnect to get device list
+[1520      ][Info   ]Connected Device Index 0:	VirtualID=4086		10 01 41 0C 62 86 40
+[1521      ][Info   ]Connected Device Index 1:	VirtualID=0000		10 FF 80 02 00 00 00
+[2476      ][Info   ]Unable add this Logitech device: Not Connected
+[3431      ][Info   ]Unable add this Logitech device: Not Connected
+[4385      ][Info   ]Unable add this Logitech device: Not Connected
+[5340      ][Info   ]Unable add this Logitech device: Not Connected
+[6295      ][Info   ]Unable add this Logitech device: Not Connected
+[7249      ][Info   ]Unable add this Logitech device: Not Connected
+[8203      ][Info   ]Unable add this Logitech device: Not Connected
+[9158      ][Info   ]Unable add this Logitech device: Not Connected
+[10112     ][Info   ]Unable add this Logitech device: Not Connected
+[11067     ][Info   ]Unable add this Logitech device: Not Connected
+[11068     ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_00#8&2c9e0bbe&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[11068     ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col05#8&8c6cdfc&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11068     ][Info   ][DetectionManager] HID device connected: [046d:c539 - \\?\HID#VID_046D&PID_C539&MI_02&Col02#8&6f944bd&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11650     ][Info   ]Count of connected devices to C539: 1
+[11650     ][Info   ]Faking a reconnect to get device list
+[11653     ][Info   ]Connected Device Index 0:	VirtualID=4086		10 01 41 0C 62 86 40
+[11654     ][Info   ]Connected Device Index 1:	VirtualID=0000		10 FF 80 02 00 00 00
+[11654     ][Info   ][Logitech receiver C539 @ \\?\HID#VID_046D&PID_C539&MI_02&Col02#8&6f944bd&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}] 1 paired device(s)
+[11655     ][Info   ][Logitech receiver C539] slot=1 PID=4086 is owned by 'Logitech G703 HERO Wireless Gaming Mouse', leaving it alone (disable that detector to hand it to HID++ 2.0)
+[11655     ][Info   ][DetectionManager] HID device connected: [046d:c090 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&35677bda&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11655     ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col06#8&8c6cdfc&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11656     ][Info   ][DetectionManager] HID device connected: [046d:c539 - \\?\HID#VID_046D&PID_C539&MI_02&Col03#8&6f944bd&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11656     ][Info   ][DetectionManager] HID device connected: [046d:c539 - \\?\HID#VID_046D&PID_C539&MI_01&Col01#8&2ad0827f&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11656     ][Info   ][DetectionManager] HID device connected: [046d:c539 - \\?\HID#VID_046D&PID_C539&MI_00#8&130cf63a&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[11656     ][Info   ][DetectionManager] HID device connected: [046d:c232 - \\?\HID#VID_046D&PID_C232#2&2fb645f0&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[11657     ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col01#8&8c6cdfc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11657     ][Info   ][DetectionManager] HID device connected: [046d:c539 - \\?\HID#VID_046D&PID_C539&MI_01&Col02#8&2ad0827f&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11657     ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col07#8&8c6cdfc&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11657     ][Info   ][DetectionManager] HID device connected: [046d:c539 - \\?\HID#VID_046D&PID_C539&MI_01&Col03#8&2ad0827f&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11657     ][Info   ][DetectionManager] HID device connected: [046d:c539 - \\?\HID#VID_046D&PID_C539&MI_01&Col04#8&2ad0827f&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11658     ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col02#8&8c6cdfc&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11658     ][Info   ][DetectionManager] HID device connected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_01&Col02#8&44aa7e9&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11658     ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col08#8&8c6cdfc&0&0007#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11658     ][Info   ][DetectionManager] HID device connected: [048d:5702 - \\?\HID#VID_048D&PID_5702&Col01#7&1333bcee&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11659     ][Info   ][DetectionManager] HID device connected: [048d:5702 - \\?\HID#VID_048D&PID_5702&Col02#7&1333bcee&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[11775     ][Info   ][DetectionManager] Registering RGB controller B550M AORUS ELITE
+[11776     ][Info   ]------------------------------------------------------
+[11776     ][Info   ]|              Detecting other devices               |
+[11776     ][Info   ]------------------------------------------------------
+[11851     ][Info   ]Start PawnIO: LpcIO.bin
+[11856     ][Error  ]Could not open PawnIO, PawnIO initialization aborted
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0087 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0001 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0055 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0055 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0020 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0021 with status -2147024890
+[11856     ][Info   ]Start PawnIO: LpcIO.bin
+[11856     ][Error  ]Could not open PawnIO, PawnIO initialization aborted
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0087 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0001 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0055 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0055 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0020 with status -2147024890
+[11856     ][Error  ][superio] LpcIO ioctl_superio_inb failed at reg 0021 with status -2147024890
+[12334     ][Warning][Creative SoundBlaster AE-5] No matching device found
+[12334     ][Warning][Creative SoundBlaster AE-5] Device initialization failed
+[12336     ][Info   ]------------------------------------------------------
+[12336     ][Info   ]|                Detection completed                 |
+[12336     ][Info   ]------------------------------------------------------
+[12336     ][Dialog ]<h2>Warning:</h2><p>One or more I2C/SMBus interfaces failed to initialize.</p><p>Depending on which interfaces failed to initialize, some RGB DRAM modules, some motherboards' onboard RGB lighting, and RGB graphics cards may not be available in OpenRGB.</p><p>On Windows, this is usually caused by a failure to load the PawnIO driver.</p><p>For OpenRGB to access these devices, you must install PawnIO from <a href='https://pawnio.eu/'>https://pawnio.eu</a> and run OpenRGB as administrator or as a system service.</p><p>If you are not using any of the devices listed above, you can safely ignore this message.</p>
+[1238519   ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_00#8&2c9e0bbe&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[1238519   ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col01#8&8c6cdfc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1238519   ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col02#8&8c6cdfc&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1238520   ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col03#8&8c6cdfc&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1238520   ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col04#8&8c6cdfc&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[1238520   ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col05#8&8c6cdfc&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1238520   ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col06#8&8c6cdfc&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1238521   ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col07#8&8c6cdfc&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1238521   ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col08#8&8c6cdfc&0&0007#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1239600   ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col01#8&8c6cdfc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1239614   ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col02#8&8c6cdfc&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1239626   ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col03#8&8c6cdfc&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1239632   ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col05#8&8c6cdfc&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1239644   ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col06#8&8c6cdfc&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1239656   ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col08#8&8c6cdfc&0&0007#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[1239662   ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_00#8&2c9e0bbe&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[1239671   ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col04#8&8c6cdfc&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[1239677   ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col07#8&8c6cdfc&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8097969   ][Info   ][NetworkServer] Network server started
+[8097969   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8097969   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8099078   ][Info   ][NetworkServer] Network server started
+[8099078   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8099078   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8100455   ][Info   ][NetworkServer] Network server started
+[8100455   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8100455   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8102049   ][Info   ][NetworkServer] Network server started
+[8102049   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8102049   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8102495   ][Info   ][NetworkServer] Network server started
+[8102495   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8102495   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8103649   ][Info   ][NetworkServer] Network server started
+[8103649   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8103649   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8105610   ][Info   ][NetworkServer] Network server started
+[8105610   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8105610   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8107026   ][Info   ][NetworkServer] Network server started
+[8107026   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8107026   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8107753   ][Info   ][NetworkServer] Network server started
+[8107753   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8107753   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8347147   ][Info   ][DetectionManager] HID device disconnected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_00#8&2cb555b2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8347148   ][Info   ][DetectionManager] HID device disconnected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_01&Col01#8&44aa7e9&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[8347149   ][Info   ][DetectionManager] HID device disconnected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_01&Col02#8&44aa7e9&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8347149   ][Info   ][DetectionManager] HID device disconnected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_01&Col03#8&44aa7e9&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8347150   ][Info   ][DetectionManager] HID device disconnected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_02&Col01#8&35b4ddc4&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8347150   ][Info   ][DetectionManager] HID device disconnected: [046d:c090 - \\?\HID#VID_046D&PID_C090&MI_02&Col02#8&35b4ddc4&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8347150   ][Info   ][DetectionManager] Unregistering RGB controller G703 LIGHTSPEED Wireless Gaming Mouse w/ HERO
+[8347153   ][Info   ][DetectionManager] HID device disconnected: [046d:c090 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&35677bda&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8347155   ][Info   ][DetectionManager] HID device connected: [046d:4086 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&3b0a3d5b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8347167   ][Info   ][DetectionManager] HID device disconnected: [046d:4086 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&3b0a3d5b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8347229   ][Info   ][DetectionManager] HID device connected: [046d:c090 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&3b0a3d5b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8352241   ][Info   ][DetectionManager] HID device disconnected: [046d:c090 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&3b0a3d5b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8352271   ][Info   ][DetectionManager] HID device connected: [046d:4086 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&3b0a3d5b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[8960282   ][Info   ][NetworkServer] Network server started
+[8960282   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8960283   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8964483   ][Info   ][NetworkServer] Network server started
+[8964483   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8964483   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8970143   ][Info   ][NetworkServer] Network server started
+[8970143   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8970143   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8972173   ][Info   ][NetworkServer] Network server started
+[8972173   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8972173   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8974496   ][Info   ][NetworkServer] Network server started
+[8974496   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8974496   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8976780   ][Info   ][NetworkServer] Network server started
+[8976780   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8976780   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8977794   ][Info   ][NetworkServer] Network server started
+[8977794   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8977794   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8979227   ][Info   ][NetworkServer] Network server started
+[8979228   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8979228   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8980705   ][Info   ][NetworkServer] Network server started
+[8980705   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8980705   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[8981444   ][Info   ][NetworkServer] Network server started
+[8981444   ][Error  ][NetworkServer] Invalid magic received, closing listener
+[8981444   ][Info   ][NetworkServer] Closing server connection: 127.0.0.1
+[10192269  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_00#8&2c9e0bbe&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[10192270  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col01#8&8c6cdfc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192270  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col02#8&8c6cdfc&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192270  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col03#8&8c6cdfc&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192270  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col04#8&8c6cdfc&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[10192270  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col05#8&8c6cdfc&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192270  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col06#8&8c6cdfc&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192270  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col07#8&8c6cdfc&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192270  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col08#8&8c6cdfc&0&0007#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192344  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col01#8&8c6cdfc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192351  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col02#8&8c6cdfc&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192360  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col03#8&8c6cdfc&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192369  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col05#8&8c6cdfc&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192375  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col06#8&8c6cdfc&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192382  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col08#8&8c6cdfc&0&0007#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10192391  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_00#8&2c9e0bbe&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[10192397  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col04#8&8c6cdfc&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[10192406  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col07#8&8c6cdfc&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10520997  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_00#8&2c9e0bbe&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[10520997  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col01#8&8c6cdfc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10520997  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col02#8&8c6cdfc&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521000  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col03#8&8c6cdfc&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521003  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col04#8&8c6cdfc&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[10521004  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col05#8&8c6cdfc&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521004  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col06#8&8c6cdfc&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521005  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col07#8&8c6cdfc&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521005  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col08#8&8c6cdfc&0&0007#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521077  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col01#8&8c6cdfc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521083  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col02#8&8c6cdfc&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521092  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col03#8&8c6cdfc&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521101  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col05#8&8c6cdfc&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521107  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col06#8&8c6cdfc&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521113  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col08#8&8c6cdfc&0&0007#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[10521119  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_00#8&2c9e0bbe&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[10521132  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col04#8&8c6cdfc&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[10521143  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col07#8&8c6cdfc&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[12644442  ][Info   ][DetectionManager] HID device disconnected: [046d:4086 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&3b0a3d5b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29361445  ][Info   ][DetectionManager] HID device connected: [046d:4086 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&3b0a3d5b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29363159  ][Info   ][DetectionManager] HID device disconnected: [046d:4086 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&3b0a3d5b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29363172  ][Info   ][DetectionManager] HID device connected: [046d:4086 - \\?\HID#HID_DEVICE_SYSTEM_VHF#8&3b0a3d5b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29378123  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_00#8&2c9e0bbe&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[29378123  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col01#8&8c6cdfc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29378124  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col02#8&8c6cdfc&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29378124  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col03#8&8c6cdfc&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29378124  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col04#8&8c6cdfc&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[29378125  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col05#8&8c6cdfc&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29378125  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col06#8&8c6cdfc&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29378126  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col07#8&8c6cdfc&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29378126  ][Info   ][DetectionManager] HID device disconnected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col08#8&8c6cdfc&0&0007#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29379205  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col01#8&8c6cdfc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29379212  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col02#8&8c6cdfc&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29379229  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col03#8&8c6cdfc&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29379235  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col05#8&8c6cdfc&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29379244  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col06#8&8c6cdfc&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29379256  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col08#8&8c6cdfc&0&0007#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+[29379265  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_00#8&2c9e0bbe&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[29379274  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col04#8&8c6cdfc&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\KBD]
+[29379280  ][Info   ][DetectionManager] HID device connected: [258a:0049 - \\?\HID#VID_258A&PID_0049&MI_01&Col07#8&8c6cdfc&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}]
