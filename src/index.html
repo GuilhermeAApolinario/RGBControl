@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Control — Periféricos & Iluminação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0c0d10;
+            --bg-nav: #000000;
+            --bg-card: #18191c;
+            --bg-card-hover: #202226;
+            --border-subtle: #292a2d;
+            --text-primary: #ffffff;
+            --text-secondary: #8e9299;
+            --accent-blue: #00b4d8;
+            --accent-glow: rgba(0, 180, 216, 0.25);
+            --status-green: #2ec4b6;
+            --danger-red: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Top Header */
+        header {
+            background-color: var(--bg-nav);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 18px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--text-primary);
+            border-bottom-color: var(--accent-blue);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* Botão Mestre de Modo Luz On/Off */
+        .master-power-btn {
+            background: #141518;
+            border: 1px solid var(--border-subtle);
+            color: var(--status-green);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .master-power-btn.off {
+            color: var(--danger-red);
+            border-color: rgba(239, 68, 68, 0.4);
+            background: rgba(239, 68, 68, 0.08);
+        }
+
+        .power-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        /* Layout Principal */
+        main {
+            flex: 1;
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Grid de Dispositivos Conectados */
+        .devices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            flex: 1;
+            align-content: start;
+        }
+
+        .device-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .device-card:hover {
+            background-color: var(--bg-card-hover);
+            border-color: #3b3d42;
+            transform: translateY(-2px);
+        }
+
+        .device-card.selected {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .device-header {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .device-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .battery-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .battery-icon {
+            display: inline-block;
+            width: 18px;
+            height: 10px;
+            border: 1.5px solid var(--text-secondary);
+            border-radius: 2px;
+            position: relative;
+            padding: 1px;
+        }
+
+        .battery-icon::after {
+            content: '';
+            position: absolute;
+            right: -4px;
+            top: 2px;
+            width: 2px;
+            height: 4px;
+            background: var(--text-secondary);
+        }
+
+        .battery-fill {
+            height: 100%;
+            background: var(--status-green);
+            border-radius: 1px;
+        }
+
+        .device-image-placeholder {
+            width: 140px;
+            height: 140px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        .device-image-placeholder svg {
+            width: 100px;
+            height: 100px;
+            fill: none;
+            stroke: var(--text-primary);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            opacity: 0.9;
+        }
+
+        /* Janela Inteligente Lateral */
+        .lighting-panel {
+            width: 340px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: fit-content;
+        }
+
+        .panel-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .control-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            background: #111215;
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.88rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        select:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .color-presets {
+            display: flex;
+            gap: 10px;
+            margin-top: 4px;
+        }
+
+        .color-swatch {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.1);
+        }
+
+        .color-swatch.selected {
+            border-color: #ffffff;
+        }
+
+        input[type="color"] {
+            -webkit-appearance: none;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: none;
+        }
+
+        input[type="color"]::-webkit-color-swatch-wrapper {
+            padding: 0;
+        }
+
+        input[type="color"]::-webkit-color-swatch {
+            border: 1px solid var(--border-subtle);
+            border-radius: 50%;
+        }
+
+        .range-slider {
+            width: 100%;
+            accent-color: var(--accent-blue);
+            cursor: pointer;
+        }
+
+        .status-msg {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="logo">RGB<span>Control</span></div>
+            <nav>
+                <a href="#" class="active">Dispositivos Conectados</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <!-- Botão Global Modo Luz On / Off -->
+            <button class="master-power-btn" id="master-power-btn" onclick="toggleMasterPower()">
+                <div class="power-indicator"></div>
+                <span id="power-text">Modo Luz: ON</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Grelha de Dispositivos Identificados no PC -->
+        <div class="devices-grid" id="devices-container">
+            
+            <!-- Placa-Mãe (Novo Ícone Detalhado) -->
+            <div class="device-card" onclick="selectDevice('Placa-Mãe ARGB (Motherboard)', 'N/A (Energia Direta)', this, true)">
+                <div class="device-header">
+                    <div class="device-title">PLACA-MÃE ARGB</div>
+                    <div class="battery-info" style="color: var(--accent-blue);">
+                        <span>Alimentação Direta</span>
+                    </div>
+                </div>
+                <div class="device-image-placeholder">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2" stroke-width="1.5"></rect>
+                        <path d="M7 7h3v3H7zM14 7h3v3h-3zM7 14h3v3H7z"></path>
+                        <line x1="10" y1="8.5" x2="14" y2="8.5"></line>
+                        <line x1="8.5" y1="10" x2="8.5" y2="14"></line>
+                        <path d="M14 14h3.5v3.5H14z" stroke-dasharray="1 1"></path>
+                    </svg>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--status-green);">● Headers ARGB Ativos</div>
+            </div>
+
+            <!-- Mouse (Novo Ícone Ergonómico Detalhado) -->
+            <div class="device-card selected" onclick="selectDevice('G703 LIGHTSPEED (Mouse)', '95%', this, false)">
+                <div class="device-header">
+                    <div class="device-title">G703 LIGHTSPEED</div>
+                    <div class="battery-info">
+                        <span>95%</span>
+                        <div class="battery-icon">
+                            <div class="battery-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="device-image-placeholder">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2a6 6 0 0 0-6 6v8a6 6 0 0 0 12 0V8a6 6 0 0 0-6-6z"></path>
+                        <line x1="12" y1="2" x2="12" y2="10"></line>
+                        <path d="M9 6h6"></path>
+                    </svg>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--status-green);">● Conectado (Sem Fios)</div>
+            </div>
+
+            <!-- Teclado (Novo Ícone Mecânico Compacto Detalhado) -->
+            <div class="device-card" onclick="selectDevice('PRO X KEYBOARD (Teclado)', '80%', this, false)">
+                <div class="device-header">
+                    <div class="device-title">PRO X KEYBOARD</div>
+                    <div class="battery-info">
+                        <span>80%</span>
+                        <div class="battery-icon">
+                            <div class="battery-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="device-image-placeholder">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                        <line x1="5" y1="9" x2="7" y2="9"></line>
+                        <line x1="9" y1="9" x2="11" y2="9"></line>
+                        <line x1="13" y1="9" x2="15" y2="9"></line>
+                        <line x1="17" y1="9" x2="19" y2="9"></line>
+                        <line x1="5" y1="13" x2="8" y2="13"></line>
+                        <line x1="10" y1="13" x2="14" y2="13"></line>
+                        <line x1="6" y1="17" x2="18" y2="17"></line>
+                    </svg>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--status-green);">● Conectado (USB)</div>
+            </div>
+
+            <!-- Headset (Mantido conforme aprovado) -->
+            <div class="device-card" onclick="selectDevice('PRO X HEADSET (Headset)', '60%', this, false)">
+                <div class="device-header">
+                    <div class="device-title">PRO X HEADSET</div>
+                    <div class="battery-info">
+                        <span>60%</span>
+                        <div class="battery-icon">
+                            <div class="battery-fill" style="width: 60%; background: #f59e0b;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="device-image-placeholder">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                    </svg>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--status-green);">● Conectado (Bluetooth)</div>
+            </div>
+
+        </div>
+
+        <!-- Janela Inteligente Lateral -->
+        <div class="lighting-panel">
+            <div class="panel-title">
+                <span id="active-device-name">G703 LIGHTSPEED (Mouse)</span>
+                <span style="font-size: 0.75rem; color: var(--accent-blue);">Config LED</span>
+            </div>
+
+            <div class="control-group" id="battery-status-group">
+                <label class="control-label">Status da Bateria</label>
+                <div id="active-battery-text" style="font-size: 0.9rem; font-weight: 600; color: var(--status-green);">95% (Nível Ótimo)</div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Modo de Animação</label>
+                <select id="effect-select">
+                    <option value="fixed">Fixo (Cor Estática)</option>
+                    <option value="cycle">Ciclo de Cores (Spectrum)</option>
+                    <option value="breathing">Respirar (Pulse)</option>
+                    <option value="wave">Onda ARGB</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Paleta de Cores</label>
+                <div class="color-presets">
+                    <div class="color-swatch selected" style="background: #00b4d8;" onclick="setPresetColor(this)"></div>
+                    <div class="color-swatch" style="background: #7209b7;" onclick="setPresetColor(this)"></div>
+                    <div class="color-swatch" style="background: #f72585;" onclick="setPresetColor(this)"></div>
+                    <div class="color-swatch" style="background: #4cc9f0;" onclick="setPresetColor(this)"></div>
+                    <input type="color" id="custom-color" value="#00b4d8">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Brilho Específico (<span id="bright-val">100</span>%)</label>
+                <input type="range" class="range-slider" min="0" max="100" value="100" oninput="document.getElementById('bright-val').innerText = this.value">
+            </div>
+
+            <div class="status-msg" id="panel-status-msg">Aplicado instantaneamente ao selecionar.</div>
+        </div>
+    </main>
+
+    <script>
+        let isMasterOn = true;
+
+        function selectDevice(name, batteryInfo, cardEl, isMotherboard) {
+            document.querySelectorAll('.device-card').forEach(c => c.classList.remove('selected'));
+            cardEl.classList.add('selected');
+            
+            document.getElementById('active-device-name').innerText = name;
+            
+            const batteryGroup = document.getElementById('battery-status-group');
+            if (isMotherboard) {
+                batteryGroup.style.display = 'none';
+            } else {
+                batteryGroup.style.display = 'flex';
+                document.getElementById('active-battery-text').innerText = batteryInfo;
+            }
+        }
+
+        function setPresetColor(el) {
+            document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+
+        function toggleMasterPower() {
+            isMasterOn = !isMasterOn;
+            const btn = document.getElementById('master-power-btn');
+            const powerText = document.getElementById('power-text');
+            const panelMsg = document.getElementById('panel-status-msg');
+
+            if (isMasterOn) {
+                btn.classList.remove('off');
+                powerText.innerText = "Modo Luz: ON";
+                panelMsg.innerText = "Iluminação do PC ativa e operando normalmente.";
+            } else {
+                btn.classList.add('off');
+                powerText.innerText = "Modo Luz: OFF (Apagado)";
+                panelMsg.innerText = "⚠️ MODO ESCURO ATIVO: Todo o RGB do PC está desligado.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "controle-bateria-argb",
+  "version": "1.0.0",
+  "description": "Aplicativo de controle de bateria e ARGB",
+  "main": "main.js",
+  "scripts": {
+  "start": "http-server -p 3000 -o"
+},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
